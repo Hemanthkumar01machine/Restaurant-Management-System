@@ -98,11 +98,11 @@ def bill_saving_ftn():
                 bill.write("\n")
                 bill.write("Address : 9/1,5/1 Rajavathani Street,".center(80," "))
                 bill.write("\n")
-                bill.write("          Shevapet, Salem-636002 (TN)".center(80," "))
+                bill.write("          Shevapet, Salem-###### (TN)".center(80," "))
                 bill.write("\n")
-                bill.write("Mobile : 6374443482".center(80," "))
+                bill.write("Mobile : 6374###4##".center(80," "))
                 bill.write("\n")
-                bill.write("Email : hemanthkumarpb20@gmail.com".center(80," "))
+                bill.write("Email : hemanth#########@gmail.com".center(80," "))
                 bill.write("\n")
                 bill.write("\n")
                 gst_number="GST Number : "+gstin_entry_lbl.get()
@@ -356,7 +356,7 @@ def sms_ftn(*args):
                 def sms_sending_ftn():
                     url="https://www.fast2sms.com/dev/bulk"
                     params={
-                        "authorization":"#Paste Your API Key",
+                        "authorization":"#Paste Your API Key",            #Paste Your Generated API key here if no generate it from fast2sms site.
                         "sender_id":"FSTSMS",
                         "message":sms_bill,
                         "language":"english",
@@ -391,8 +391,8 @@ def mail_ftn(*args):
                 if presence==0:
                     bill_saving_ftn()
                     presence+=1
-                email="#hemanthkumarpb20@gmail.com"
-                password="2004200212"
+                email="#Mail_I'd"                       #Paste Your Mail I'd here
+                password="#Password"                    #Paste your Password here (before turn on less secure app in your mail settings)
 
                 email_message=MIMEMultipart()
                 email_message["From"]=email
